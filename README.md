@@ -2,7 +2,7 @@
 
 ## Information
 
-В рамках данного задания все графы удовлетворяют следующим требованиям:
+В рамках данного задания все графы должны удовлетворять следующим требованиям:
 - Веса ребер только натуральными числами.
 - Могут быть петли.
 - Веса могут отличаться на всех ребрах.
@@ -27,6 +27,14 @@
 10 12 34 43
 49 34 0 13
 1 43 13 0
+```
+
+Пример dot файла:
+```
+digraph graphname {
+    a -> b -> c;
+    b -> d;
+}
 ```
 
 Реализуй библиотеку _s21_graph_algorithms_:
@@ -74,5 +82,21 @@
     7. Решение задачи комивояжера с выводом результирующего маршрута и его длины в консоль.
     8. Экспорт матрицы смежности графа в dot файл.
 
-## Part 5. Примеры
+## Сборка
 
+Сборка программы настроена с помощью Makefile
+
+* `make` - Сборка программы
+* `make test` - Покрытие unit-тестами c помощью библиотеки GTest
+* `make style` - Проверка кода на Google style
+* `make clean` - Удаление ненужных файлов
+
+## Примеры
+
+### Breadth First Search Example
+
+![BreadthFirstSearchExample](misc/BreadthFirstSearchExample.png)
+
+### Solve Traveling Salesman Problem Example
+
+![SolveTravelingSalesmanProblemExample](misc/SolveTravelingSalesmanProblemExample.png)
